@@ -15,8 +15,12 @@ while True:
     roll = 
     match = re.search(r'roll.[1-9]d*', roll)
     if match != None:
-        x = int(roll[5])
-        y = 0
+        if roll[6] == 'd':
+            x = int(roll[5])
+            y = 0
+        else:
+            x = int(roll[5]+roll[6])
+            y = 0
         while y != x:
             if 'd20'in roll:
                 print(random.randint(1,20))
