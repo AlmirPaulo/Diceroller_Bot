@@ -1,7 +1,18 @@
+from selenium.webdriver import Firefox
 import re, random
 
+driver = Firefox(executable_path = 'path/to/geckodriver')
+driver.get('https://web.whatsapp.com/')
+
+group = 'GroupName'
+find_group = driver.find_elements_by_css_selector('span[title]')
+for i in find_group:
+    if i.text == group:
+        i.click()
+#A fazer: Se escrever roll... rola enviar msg com o roll.
+
 while True:
-    roll = input('')
+    roll = 
     match = re.search(r'roll.[1-9]d*', roll)
     if match != None:
         x = int(roll[5])
