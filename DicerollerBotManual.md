@@ -1,0 +1,1 @@
+# Diceroller Bot Manual
