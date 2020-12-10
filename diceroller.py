@@ -1,16 +1,32 @@
-from selenium.webdriver import Firefox
+from selenium.webdriver import Firefox, Chrome
 import re, random
 
-driver = Firefox(executable_path = '/home/ap/code/projetos/Diceroller_Bot/geckodriver')
+
+print('Welcome to the Diceroller Bot! \n If you are having problems running this bot you can find some information here:\n https://github.com/AlmirPaulo/Diceroller_Bot')
+browser = input ('What is your browser? \n (1) Firefox \n (2) Chrome \n--')
+if browser == '1':
+    driver = Firefox()
+elif browser == '2':
+    driver = Chrome()
+
 driver.get('https://web.whatsapp.com/')
 
 
-trigg = input ('>')
-if trigg == '1':
+trigg = input ('When you ready say "go" ')
+if trigg == 'go':
     while True:
         msg = driver.find_element_by_xpath(r'/html/body/div[1]/div/div/div[4]/div/footer/div[1]/div[2]/div/div[2]')
-        roll = input ('--')
+        roll = input ('>')
         match = re.search(r'roll.[1-9]d*', roll)
+        if roll == 'help':
+            print('''Hi! \n
+        I am the Diceroller Bot. I am a creation of Almir Paulo. You can check his works or make contact here: \n
+        https://github.com/AlmirPaulo/
+        If you need help, you can read my manual here: \n 
+        https://github.com/AlmirPaulo/Diceroller_Bot/blob/main/DicerollerBotManual.md\n
+        Any bug founded can be reported on this issues page:\n
+        https://github.com/AlmirPaulo/Diceroller_Bot/issues \n
+        Have a nice game!\n''')
         if match != None:
             if roll[6] != 'd':
                 y = 0
@@ -47,4 +63,6 @@ if trigg == '1':
                     msg.send_keys('D10: ',str(random.randint(1,10)))
                     driver.find_element_by_class_name('_2Ujuu').click()
                 y = y +1
+        else:
+            print('Something is wrong. If you need some help, type: help')       
            
