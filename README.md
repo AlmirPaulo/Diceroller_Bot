@@ -3,7 +3,7 @@ A bot to roll the dices for you in your RPG session on Whatsapp.
 
 ## Download and Installation 
 
-<button style="background:#006;color:#fff;font-weight:bold;border-radius:10px;"><a href='https://github.com/AlmirPaulo/Diceroller_Bot/blob/main/DicerollerBot.deb' download style="text-decoration:none;">For Linux</a></button>
+<a href='https://github.com/AlmirPaulo/Diceroller_Bot/blob/main/DicerollerBot.deb?raw=true' download style="text-decoration:none;">Linux Version (.deb)</a>
 
 The version for **Windows** (with interface) is not ready yet.
 
