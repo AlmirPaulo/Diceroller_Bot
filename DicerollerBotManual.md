@@ -28,7 +28,7 @@ It's a technology that allows to automatize the browser. If you use Firefox you 
 ### Running the Bot on Command Line:
 1. Run this command at the termminal:
 
-    python3 diceroller.py
+        python3 diceroller.py
 
 2. Choose your browser. Just type 1 for Firefox or 2 for Chrome.
 
