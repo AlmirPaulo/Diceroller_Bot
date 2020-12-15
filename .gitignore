@@ -1,6 +1,7 @@
 note_*
 *.log
 *.swp
+*.spec
 env
 geckodriver
 chromedriver
