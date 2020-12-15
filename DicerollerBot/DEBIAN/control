@@ -1,0 +1,9 @@
+Package: DicerollerBot
+Version:1.0
+Architecture: all
+Maintainer: Almir Paulo <https://github.com/AlmirPaulo>
+Installed-size: 47.5MB
+Section: other
+Priority: optional
+Description: Simulate dice rolls on whatsapp.
+

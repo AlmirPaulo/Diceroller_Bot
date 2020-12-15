@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Diceroller Bot
+Type=Application
+Categories=Utility
+Exec=/usr/local/lib/diceroller_bot/dist/diceroller_gui
+Terminal=false
